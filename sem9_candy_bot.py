@@ -16,6 +16,8 @@ def send_welcome(message):
 def send_help_info(message):
     msg = 'Доступные команды:\n/start\n/help\n/remove\n/game'
     bot.send_message(message.chat.id, msg)
+    
+
 @bot.message_handler(commands=['remove'])
 def remove_words_with_string(message):
     text_all = message.text.split()
